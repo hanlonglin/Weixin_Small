@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+
+<view class='view-top'>
+  <image class='login-logo' src='/images/login.png'></image>
+</view>
+<view class='mform'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="in-name">
+      <input placeholder="用户名" name='uname' value="" auto-focus/>
+    </view>
+    <view class="in-passwd">
+      <input placeholder="密码" password='true' name='passwd' value="" />
+    </view>
+    <button type="primary" form-type='submit' class='btn-submit' hover-class='button-hover' bindtap="primary"> 登陆 </button>
+  </form>
+</view>

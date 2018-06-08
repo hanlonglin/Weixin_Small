@@ -1,0 +1,40 @@
+/* pages/login/login.wxss */
+
+page {
+  background-color: #e6e6fa;
+}
+
+.view-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-logo {
+  width: 250rpx;
+  height: 250rpx;
+  margin: 20rpx;
+}
+.mform{
+  display: block;
+}
+.button-hover {
+  background-color: red;
+}
+
+.in-name {
+  background-color: #fff;
+  height: auto;
+  width: 100%;
+}
+
+.in-passwd {
+  background-color: #fff;
+  height: auto;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.btn-submit {
+  margin-top: 20rpx;
+}

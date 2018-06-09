@@ -33,7 +33,7 @@ Page({
     autoplay: false,
     interval: 5000,
     duration: 1000,
-    serverURL: "http://123.235.17.134:8888/Sms_demo/"
+    serverUrl: getApp().globalData.serverUrl
   },
   //事件处理函数
   onLoad: function () {
@@ -46,7 +46,7 @@ Page({
   getProList: function () {
     var self=this;
     wx.request({
-      url: "http://123.235.17.134:8888/Sms_demo/api/action", //仅为示例，并非真实的接口地址
+      url: getApp().globalData.serverUrl + '/api/action', //仅为示例，并非真实的接口地址
       method: "GET",
       data: {
         flag: 'getrecommandsbypage',

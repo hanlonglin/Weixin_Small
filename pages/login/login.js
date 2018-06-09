@@ -72,35 +72,34 @@ Page({
     console.log("提交表单:", e.detail.value.uname, e.detail.value.passwd);
 
     wx.request({
-      url: 'http://desktop-ancpu97:8080/CreditSystem/ApiServlet', //仅为示例，并非真实的接口地址
+      url: getApp().globalData.serverUrl+'/api/action', //仅为示例，并非真实的接口地址
       method: "POST",
       data: {
         flag: 'login',
-        tid: e.detail.value.uname,
-        tpassword: e.detail.value.passwd
+        number: e.detail.value.uname,
+        password: e.detail.value.passwd
       },
-      header:{
+      header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
         console.log("return from internet:");
         console.log(res.data)
-        var result=res.data.result;
-        var msg=res.data.msg;
-        console.log("result:"+result+",msg:"+msg);
-        if(result==1)
-        {
+        var result = res.data.result;
+        var msg = res.data.msg;
+        console.log("result:" + result + ",msg:" + msg);
+        if (result == 1) {
           wx.showToast({
             title: '登陆成功',
           })
           wx.switchTab({
             url: '../index/index',
           })
-        }else{
+        } else {
           wx.showModal({
             title: '登陆失败',
             content: msg,
-            showCancel:false
+            showCancel: false
           })
         }
       }

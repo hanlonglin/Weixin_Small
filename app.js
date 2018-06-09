@@ -34,6 +34,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    serverUrl:"http://123.235.17.134:8888/Sms_demo/"
   }
 })

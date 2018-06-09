@@ -7,7 +7,7 @@
 </swiper>
 <view class='view-list' wx:for="{{proItems}}">
   <view class='view-item'>
-    <image class='pro-logo' src="{{serverURL}}{{item.imageurl}}" />
+    <image class='pro-logo' src="{{serverUrl}}{{item.imageurl}}" />
     <view class='pro-body'>
       <view class='pro-title'>{{item.title}}</view>
       <text class='pro-detail'>{{item.content}}</text>
